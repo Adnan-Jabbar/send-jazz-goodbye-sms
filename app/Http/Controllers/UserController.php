@@ -32,11 +32,11 @@ class UserController extends Controller
 
     private function executeURL($from, $to, $msg)
     {
-        $URL = "{$_ENV['APP_IP']}/sendsms_url.html?Username={$_ENV['APP_USERNAME']}&Password={$_ENV['APP_PASSWORD']}&From=$from&To=$to&Message=$msg";
+        $URL = "http://example.com/abcd";
 
         return Http::get("$URL");
 
-        // $URL = "https://connect.jazzcmt.com/sendsms_url.html?Username=03018610162&Password=J%40zzM3Tech%230162&From=Business&To=3008217084&Message=ADNAN2024";
+        // $URL = "http://example.com/abcd";
 
         // return Http::withHeaders([
         //     'Authorization' => 'Bearer $apiKey',
@@ -44,7 +44,6 @@ class UserController extends Controller
         // ])
         // ->withOptions(["verify"=>false])
         // ->get("$URL");
-
     }
 
     public function sendSMS(Request $request) {
